@@ -95,6 +95,31 @@ h1 {
 
 }
 
+#prompt {
+  border-radius: 25px;
+  background-color: white;
+  font-family: "Josefin Sans";
+  border-style: double;
+  padding: 10px;
+  font-size: large;
+  color:black;
+}
+
+.fraction {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle; 
+  letter-spacing: 0.001em;
+  text-align: center;
+  font-size: 16px;
+
+  }
+.fraction > span { 
+  display: block; 
+  padding: 0.1em; 
+  }
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
 
 #main-container {
   border-radius: 25px;
