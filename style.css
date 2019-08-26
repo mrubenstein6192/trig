@@ -135,7 +135,7 @@ h1 {
   
 }
 
-#basics, #skipToProblems, #seeBasics{
+#basics, #skipToProblems, #seeBasics, .nextProblem{
   background-color: lightblue;
   padding: 1px 3px;
   font-size: 18px;
@@ -150,12 +150,12 @@ h1 {
   margin-left: 7px;
 }
 
-#basics:hover, #skipToProblems:hover, #seeBasics:hover {
+#basics:hover, #skipToProblems:hover, #seeBasics:hover, .nextProblem:hover {
   background-color: maroon;
   color: lightblue;
 }
 
-#basics:active, #skipToProblems:active, #seeBasics:active{
+#basics:active, #skipToProblems:active, #seeBasics:active, .nextProblem:active{
   background-color: maroon;
   color: skyblue;
   box-shadow: 5px 5px #666;
