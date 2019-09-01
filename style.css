@@ -19,6 +19,9 @@ body, html {
 
 }
 
+#firstButton, #response, #newProblem {
+  justify-content: center
+}
 
 .start {
   border-radius: 10px;
@@ -147,7 +150,7 @@ input{
   
 }
 
-#basics, #skipToProblems, #seeBasics, .nextProblem{
+#basics, #skipToProblems, #seeBasics, .nextProblem, .hideInfo, .showInfo, .submitGuess, .nextProblem2{
   background-color: lightblue;
   padding: 1px 3px;
   font-size: 18px;
@@ -162,12 +165,13 @@ input{
   margin-left: 7px;
 }
 
-#basics:hover, #skipToProblems:hover, #seeBasics:hover, .nextProblem:hover {
+#basics:hover, #skipToProblems:hover, #seeBasics:hover, .nextProblem:hover, .hideInfo:hover, .showInfo:hover, .submitGuess:hover, .nextProblem2:hover {
   background-color: maroon;
   color: lightblue;
 }
 
-#basics:active, #skipToProblems:active, #seeBasics:active, .nextProblem:active{
+
+#basics:active, #skipToProblems:active, #seeBasics:active, .nextProblem:active, .hideInfo:active, .showInfo:active, .submitGuess:active, .nextProblem2:active{
   background-color: maroon;
   color: skyblue;
   box-shadow: 5px 5px #666;

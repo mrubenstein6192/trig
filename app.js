@@ -6,6 +6,7 @@ $(document).ready(function() {
   $("#practiceProblems").hide();
   $("#randomProblem").hide();
   $("#fractionInput").hide();
+  $(".nextProblem2").hide();
 
   var problems = [
     {
@@ -162,7 +163,7 @@ $(document).ready(function() {
     console.log("Start");
     $("#welcome").hide();
     $("#prompt").show();
-   
+    $(".nextProblem").hide();
     $("#buttonChoices").show();
 
 
@@ -173,6 +174,9 @@ $(document).ready(function() {
       $("#practiceProblems").show();
       $("#seeBasics").hide();
       $("#randomProblem").show();
+      $(".showInfo").hide();
+      $(".nextProblem").show();
+      $("#newProblem").hide();
     })
 
     $("#skipToProblems").on("click", function() {
@@ -184,13 +188,28 @@ $(document).ready(function() {
       })
     })
 
+    $(".hideInfo").on("click", function() {
+      $("#practiceSides").hide();
+      $("#showFirstProblem").show();
+      $(".hideInfo").hide()
+      $(".showInfo").show();
+    })
+
+    $(".showInfo").on("click", function() {
+      $("#practiceSides").show();
+      $(".showInfo").hide();
+      $(".hideInfo").show();
+    })
+
     $(".nextProblem").on("click", function() {
       
       showQuestion();
 
       function showQuestion() {
-      $("#newProblem").hide();
-      $("#firstButton").hide();
+      $(".newProblem").hide();
+      $(".showinfo").hide();
+      $(".nextProblem").hide();
+      // $("#firstButton").hide();
       var randIndex = Math.floor(Math.random() * 15) + 1
       console.log(randIndex);
       console.log(problems[randIndex].question)
@@ -208,6 +227,7 @@ $(document).ready(function() {
 
       $form2 = $("<form autocomplete = 'off'></form>");
       $form2.addClass("guessForm2 ml-0 mt-2 text-right");
+      $form2.append("<div id = optional>(Optional)</div><br>")
       $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'text' maxlength = '2' size = '2'></input></span></div>");
       $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'text' maxlength = '2' size = '2'></input></span></div>");
       $form2.append("<div id = hypCheck>Hypotenuse: <span class = 'fup my-1'><input class = 'hyp' type = 'text' maxlength = '2' size = '2'></input></span></div>");
@@ -272,7 +292,9 @@ $(document).ready(function() {
           $("#response").show();
           $("#response").html("Correct! Try another?");
           $("#newProblem").show();
+          $(".nextProblem2").show();
           console.log("Numerator: " + numerator + " | Denominator: " + denominator );
+          $("#buttonAppear").html("✔")
         }
         else {
           $("#response").show();

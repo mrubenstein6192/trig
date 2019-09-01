@@ -63,104 +63,106 @@
         </div>
       </div>
 
-      <div class="row mt-2 justify-content-center">
-        <div class="col-8" id="practiceSides">
-          1) The "hypotenuse" will <u>ALWAYS</u> be the side across from the right angle.<br>The "opposite" and
-          "adjacent" sides will change depending on the orientation of your triangle. <br><br>
-          2) Idenitfy the "opposite" side first using one of the following ideas:
-          <ul>
-            <li>
-              Think of an imaginary arrow stretching from the given angle across the triangle (as seen in the pictures
-              below). The side you point to is the "opposite" side.
-            </li>
-            <li>
-              The "opposite" side will always be the only side that DOES NOT touch the given angle.
-            </li>
-          </ul>
-          3) Identify the "adjacent" side last. If you've successfully identified the "hypotenuse" and "opposite" sides,
-          then the last remaining side must be the "adjacent" side. <br>
-          The other way to think of "adjacent" is with the word <i>touching</i>. Technically, two sides will touch the
-          given angle. However, since one side must already be the "hypotenuse," the second side <i>touching</i> the
-          angle must be the "adjacent" side.
-          <div class="row mt-2">
-            <div class="col-6" id="pic1">
-              <img src="./images/opposite1.png" alt="Sides 1" width="300" height="200">
-            </div>
-            <div class="col-6" id="pic2">
-              <img src="./images/opposite2.png" alt="Sides 2" width="300" height="200">
+      <div>
+        <div class="row mt-2">
+          <div class="col-12" id="practiceSides">
+            1) The "hypotenuse" will <u>ALWAYS</u> be the side across from the right angle.<br>The "opposite" and
+            "adjacent" sides will change depending on the orientation of your triangle. <br><br>
+            2) Idenitfy the "opposite" side first using one of the following ideas:
+            <ul>
+              <li>
+                Think of an imaginary arrow stretching from the given angle across the triangle (as seen in the pictures
+                below). The side you point to is the "opposite" side.
+              </li>
+              <li>
+                The "opposite" side will always be the only side that DOES NOT touch the given angle.
+              </li>
+            </ul>
+            3) Identify the "adjacent" side last. If you've successfully identified the "hypotenuse" and "opposite"
+            sides,
+            then the last remaining side must be the "adjacent" side. <br>
+            The other way to think of "adjacent" is with the word <i>touching</i>. Technically, two sides will touch the
+            given angle. However, since one side must already be the "hypotenuse," the second side <i>touching</i> the
+            angle must be the "adjacent" side.
+            <div class="row mt-2">
+              <div class="col-3" id="pic1">
+                <img src="./images/opposite1.png" alt="Sides 1" width="300" height="200">
+              </div>
+              <div class="col-1">
+
+              </div>
+              <div class="col-3" id="pic2">
+                <img src="./images/opposite2.png" alt="Sides 2" width="300" height="200">
+              </div>
             </div>
           </div>
 
-          <div class="row mt-2 justify-content-center text-center">
+          <div class="row mt-2" id="showFirstProblem">
             <div class="col-12" id="randomProblem">
-              <div class = "row text-center justify-content-center" id = "firstButton">
-              <button class="nextProblem">
-                New Problem
-              </button>
+              <div class="row justify-content-center" id="firstButton">
+                <button class="nextProblem mx-1">
+                  New Problem
+                </button>
+                <button class="hideInfo mx-1">
+                  Hide Tips
+                </button>
+                <button class="showInfo mx-1">
+                  Show Tips
+                </button>
               </div>
-              <div class="row mt-2">
-                <div class="col-4" id="problemPrint">
+            </div>
+          </div>
 
-                </div>
-
-
-                <div class="col-8" id="fractionInput">
-                  <div class = "row">
-                    <div class = "col-4 my-4 mr-0" id = "showSides">
-
-                    </div>
-                    <div class = "text-right col-3 my-4 mr-0" id="showProb">
-
-                    </div>
-                    <!-- <form autocomplete="off" id = "guessForm">
-                    <div class="col-3 fraction ml-0 mt-2">
-                                    
-                      <span class="fup"><input class="first" maxlength="2" size="2" type="text"></input></span>
-                      <span class="bar my-1">/</span>
-                      <span class="fdn"><input class="second" maxlength="2" size="2" type="text"></input></span>
-                     
-                    </div>
-                    <div class = "col-3 mt-4" id = "check">
-                      <button type = "submit" class = "checkAnswer">
-                        Check
-                      </button>
-                    </div>
-                    </form> -->
-                    <div class = "text-left col-3 ml-0 mt-2" id = "fractionAppear">
-
-                    </div>
-                    <div class = "col-2 ml-0 mt-4" id = "buttonAppear">
-
-                    </div>
-                   
-                  </div> 
-                  <div class = "row" id = "response">
-
-                  </div>
-                  <div class = "row" id = "newProblem">
-                    <button class = "nextProblem">
-                      New Problem
-                    </button>
-                  </div>
-                </div>
-
+            <div class="row mt-2 mx-auto">
+              <div class="col-2 " id="problemPrint">
 
               </div>
+
+              <div class="col-5 my-2 mr-0" id="showSides">
+
+              </div>
+
+              <div class="text-right col-2 my-4 mr-0" id="showProb">
+
+              </div>
+                  
+              <div class="text-left col-2 ml-0 mt-2" id="fractionAppear">
+
+              </div>
+                  
+              <div class="col-1 ml-0 mt-4" id="buttonAppear">
+
+              </div>
+            </div>
+        </div>
+                <div class="row" id="response">
+
+                </div>
+                <div class="row" id="newProblem">
+                  <button class="nextProblem2">
+                    New Problem
+                  </button>
+
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div class="row mt-2">
-      <div class="col-12 text-center" id="practiceProblems">
-        <button id="seeBasics">
-          Review the Sides
-        </button>
+  <div class="row mt-2">
+    <div class="col-12 text-center" id="practiceProblems">
+      <button id="seeBasics">
+        Review the Sides
+      </button>
 
-      </div>
     </div>
+  </div>
 
 
 
