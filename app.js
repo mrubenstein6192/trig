@@ -12,96 +12,144 @@ $(document).ready(function() {
       id: 1,
       pic: './images/problem1.png',
       question: "sin(x) = ",
+      opposite: 5,
+      adjacent: 12,
+      hypotenuse: 13,
       answer: 5/13
     },
     {
       id: 2,
       pic: ("./images/problem2.png"),
       question: "sin(x) = ",
+      opposite: 7,
+      adjacent: 24,
+      hypotenuse: 25,
       answer: 7/25
     },
     {
       id: 3,
       pic: ("./images/problem3.png"),
       question: "cos(x) = ",
+      opposite: 3,
+      adjacent: 4,
+      hypotenuse: 5,
       answer: 4/5
     },
     {
       id: 4,
       pic: ("./images/problem4.png"),
       question: "tan(x) = ",
+      opposite: 4,
+      adjacent: 3,
+      hypotenuse: 5,
       answer: 4/3
     },
     {
       id: 5,
       pic: ("./images/problem5.png"),
       question: "tan(x) = ",
+      opposite: 24,
+      adjacent: 7,
+      hypotenuse: 25,
       answer: 24/7
     },
     {
       id: 6,
       pic: ("./images/problem6.png"),
       question: "cos(x) = ",
+      opposite: 12,
+      adjacent: 5,
+      hypotenuse: 13,
       answer: 5/13
     },
     {
       id: 7,
       pic: ("./images/problem7.png"),
       question: "sin(x) = ",
+      opposite: 12,
+      adjacent: 5,
+      hypotenuse: 13,
       answer: 12/13
     },
     {
       id: 8,
       pic: ("./images/problem8.png"),
       question: "tan(x) = ",
+      opposite: 5,
+      adjacent: 12,
+      hypotenuse: 13,
       answer: 5/12
     },
     {
       id: 9,
       pic: ("./images/problem9.png"),
       question: "sin(x) = ",
+      opposite: 9,
+      adjacent: 40,
+      hypotenuse: 41,
       answer: 9/41
     },
     {
       id: 10,
       pic: ("./images/problem10.png"),
       question: "cos(x) = ",
+      opposite: 40,
+      adjacent: 9,
+      hypotenuse: 41,
       answer: 9/41
     },
     {
       id: 11,
       pic: ("./images/problem11.png"),
       question: "sin(x) = ",
+      opposite: 4,
+      adjacent: 3,
+      hypotenuse: 5,
       answer: 4/5
     },
     {
       id: 12,
       pic: ("./images/problem12.png"),
       question: "tan(x) = ",
+      opposite: 3,
+      adjacent: 4,
+      hypotenuse: 5,
       answer: 3/4
     },
     {
       id: 13,
       pic: ("./images/problem13.png"),
       question: "tan(x) = ",
+      opposite: 5,
+      adjacent: 12,
+      hypotenuse: 13,
       answer: 5/12
     },
     {
       id: 14,
       pic: ("./images/problem14.png"),
       question: "sin(x) = ",
+      opposite: 12,
+      adjacent: 5,
+      hypotenuse: 13,
       answer: 12/13
     },
     {
       id: 15,
       pic: ("./images/problem15.png"),
       question: "cos(x) = ",
+      opposite: 40,
+      adjacent: 9,
+      hypotenuse: 41,
       answer: 9/41
     },
     {
       id: 16,
       pic: ("./images/problem16.png"),
       question: "sin(x) = ",
+      opposite: 24,
+      adjacent: 7,
+      hypotenuse: 25,
       answer: 24/25
     }
   ]
@@ -158,6 +206,13 @@ $(document).ready(function() {
       $(".first").focus();
       $("#response").hide();
 
+      $form2 = $("<form autocomplete = 'off'></form>");
+      $form2.addClass("guessForm2 ml-0 mt-2 text-right");
+      $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'text' maxlength = '2' size = '2'></input></span></div>");
+      $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'text' maxlength = '2' size = '2'></input></span></div>");
+      $form2.append("<div id = hypCheck>Hypotenuse: <span class = 'fup my-1'><input class = 'hyp' type = 'text' maxlength = '2' size = '2'></input></span></div>");
+      $("#showSides").html($form2)
+
       $form = $("<form autocomplete = 'off'></form>");
       $form.addClass("guessForm1 fraction ml-0 mt-2");
       $form.append("<span class = 'fup'><input class = 'first' type = 'text' maxlength = '2' size = '2'></input></span>");
@@ -173,8 +228,14 @@ $(document).ready(function() {
       
 
       $(".submitGuess").on("click", function() {
-      
+        let opp = $(".opp").val();
+        console.log("You said opp is: " + opp);
+        let adj = $(".adj").val();
+        console.log("You said adj is: " + adj);
+        let hyp = $(".hyp").val();
+        console.log("You said hyp is: " + hyp);
         console.log("This submitted");
+
         let numerator = $(".first").val();
         console.log("You said: " + numerator);
         let denominator = $(".second").val();
@@ -182,6 +243,28 @@ $(document).ready(function() {
         let quotient = numerator / denominator;
         console.log("Which gives: " + quotient);
         console.log("The answer is: " + problems[randIndex].answer);
+
+        if (opp == problems[randIndex].opposite) {
+          $("#oppCheck").css("color", "green");
+        }
+        else{
+          $("#oppCheck").css("color","red");
+          $(".opp").val("")
+        }
+        if (adj == problems[randIndex].adjacent) {
+          $("#adjCheck").css("color", "green");
+        }
+        else{
+          $("#adjCheck").css("color","red");
+          $(".adj").val("")
+        }
+        if (hyp == problems[randIndex].hypotenuse) {
+          $("#hypCheck").css("color", "green");
+        }
+        else{
+          $("#hypCheck").css("color","red");
+          $(".hyp").val("")
+        }
         
         if (quotient === problems[randIndex].answer) {
         
