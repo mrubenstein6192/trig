@@ -7,6 +7,7 @@ $(document).ready(function() {
   $("#randomProblem").hide();
   $("#fractionInput").hide();
   $(".nextProblem2").hide();
+  // $("#showFirstProblemAgain").hide();
 
   var problems = [
     {
@@ -189,14 +190,14 @@ $(document).ready(function() {
     })
 
     $(".hideInfo").on("click", function() {
-      $("#practiceSides").hide();
+      $("#hideThis").hide();
       $("#showFirstProblem").show();
       $(".hideInfo").hide()
       $(".showInfo").show();
     })
 
     $(".showInfo").on("click", function() {
-      $("#practiceSides").show();
+      $("#hideThis").show();
       $(".showInfo").hide();
       $(".hideInfo").show();
     })
@@ -236,7 +237,7 @@ $(document).ready(function() {
       $form = $("<form autocomplete = 'off'></form>");
       $form.addClass("guessForm1 fraction ml-0 mt-2");
       $form.append("<span class = 'fup'><input class = 'first' type = 'text' maxlength = '2' size = '2'></input></span>");
-      $form.append("<span class = 'bar my-1'></span>")
+      $form.append("<span class = 'bar my-3'></span>")
       // $form2 = $("<form autocomplete = 'off'></form>");
       // $form2.addClass("guessForm2 fraction ml-0 mt-2");
       $form.append("<span class = 'fdn'><input class = 'second' type = 'text' maxlength = '2' size = '2'></input></span>");
@@ -290,15 +291,17 @@ $(document).ready(function() {
         
           // showQuestion()
           $("#response").show();
-          $("#response").html("Correct! Try another?");
+          $("#response").html("Correct! Click 'New Problem' for Another!");
+          $("#response").css("color", "green").css("text-transform", "uppercase").css("font-weight", "bold");
           $("#newProblem").show();
-          $(".nextProblem2").show();
+          $(".nextProblem").show();
           console.log("Numerator: " + numerator + " | Denominator: " + denominator );
           $("#buttonAppear").html("✔")
         }
         else {
           $("#response").show();
           $("#response").html("Sorry that is incorrect. Try again!")
+          $("#response").css("color", "red").css("text-transform", "uppercase").css("font-weight", "bold");
           $(".first").val('');
           $(".second").val('');
           $(".first").focus();
