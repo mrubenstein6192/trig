@@ -54,7 +54,7 @@ $(document).ready(function() {
       id: 8,
       pic: ("./images/problem8.png"),
       question: "tan(x) = ",
-      answer: 12/5
+      answer: 5/12
     },
     {
       id: 9,
@@ -137,16 +137,69 @@ $(document).ready(function() {
     })
 
     $(".nextProblem").on("click", function() {
-      var randIndex = Math.floor(Math.random() * 16) + 1
-      console.log(randIndex);
       
+      showQuestion();
+
+      function showQuestion() {
+      $("#newProblem").hide();
+      $("#firstButton").hide();
+      var randIndex = Math.floor(Math.random() * 15) + 1
+      console.log(randIndex);
+      console.log(problems[randIndex].question)
+      console.log(problems[randIndex].answer)
+      
+      $(".first").val("");
+      $(".second").val("");
       var problemImage = new Image(150,150);
       problemImage.src = problems[randIndex].pic
       $("#problemPrint").html(problemImage);
       $("#fractionInput").show();
-      $("#fractionInput").prepend(problems[randIndex].question)
-      $("#first").focus();
+      $("#showProb").html(problems[randIndex].question)
+      $(".first").focus();
+      $("#response").hide();
+
+      $form = $("<form autocomplete = 'off'></form>");
+      $form.addClass("guessForm1 fraction ml-0 mt-2");
+      $form.append("<span class = 'fup'><input class = 'first' type = 'text' maxlength = '2' size = '2'></input></span>");
+      $form.append("<span class = 'bar my-1'></span>")
+      // $form2 = $("<form autocomplete = 'off'></form>");
+      // $form2.addClass("guessForm2 fraction ml-0 mt-2");
+      $form.append("<span class = 'fdn'><input class = 'second' type = 'text' maxlength = '2' size = '2'></input></span>");
+      $("#fractionAppear").html($form)
       
+      $button = $("<button type = 'submit'>Submit</button>")
+      $button.addClass("submitGuess")
+      $("#buttonAppear").html($button);
+      
+
+      $(".submitGuess").on("click", function() {
+      
+        console.log("This submitted");
+        let numerator = $(".first").val();
+        console.log("You said: " + numerator);
+        let denominator = $(".second").val();
+        console.log("You said: " + denominator);
+        let quotient = numerator / denominator;
+        console.log("Which gives: " + quotient);
+        console.log("The answer is: " + problems[randIndex].answer);
+        
+        if (quotient === problems[randIndex].answer) {
+        
+          // showQuestion()
+          $("#response").show();
+          $("#response").html("Correct! Try another?");
+          $("#newProblem").show();
+          console.log("Numerator: " + numerator + " | Denominator: " + denominator );
+        }
+        else {
+          $("#response").show();
+          $("#response").html("Sorry that is incorrect. Try again!")
+          $(".first").val('');
+          $(".second").val('');
+          $(".first").focus();
+        }
+      })
+    }
     })
     
     }
