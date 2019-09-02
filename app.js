@@ -22,6 +22,7 @@ $(document).ready(function() {
     $(".first").val("");
     $(".second").val("");
     var problemImage = new Image(150,150);
+    problemImage.classList.add("thisPic");
     problemImage.src = problems[randIndex].pic
     $("#problemPrint").html(problemImage);
     $("#fractionInput").show();

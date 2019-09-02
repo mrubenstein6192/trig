@@ -179,50 +179,20 @@ input{
 }
 
 
-@media screen and (max-width: 767px) {
-#prompt, #buttonChoices {
-  font-size: 9px;
-}
-.fraction{
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 34px;
-}
-
-h3 {
-  font-size: 14px;
-}
-
-#hideThis {
-  font-size: 9px;
-}
-
-img, Image {
-  width: 100px;
-  height: 100px;
-}
-
-.nextProblem, .hideInfo, .showInfo, #basics, #skipToProblems {
-  font-size: 14px;
-}
-
-#problemPrint, #showSides, #showProb, #fractionAppear, #buttonAppear {
-  font-size: 12px;
-}
-
-}
-
 @media screen and (max-width: 1025px) {
 
   
   #hideThis {
     font-size: 16px;
   }
-  .guessForm2 {
-    width: 100%;
+
+  #problemPrint {
+    justify-content: right;
+  }
+  .guessForm1, .guessForm2 {
+  
     margin-left: 10px;
+   
   }
   img, Image {
     width: 150px;
@@ -238,3 +208,51 @@ img, Image {
   }
   
   }
+
+@media screen and (max-width: 767px) {
+#prompt, #buttonChoices {
+  font-size: 9px;
+}
+.fraction{
+  font-size: 10px;
+}
+/* .thisPic {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+form {
+  display: inline-block;
+} */
+h1 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+#showSides {
+  
+  display: inline;
+}
+
+#hideThis {
+  font-size: 8px;
+}
+
+img, Image {
+  width: 100px;
+  height: 100px;
+}
+
+.nextProblem, .hideInfo, .showInfo, #basics, #skipToProblems {
+  font-size: 14px;
+}
+
+#problemPrint, #showSides, #showProb, #fractionAppear, #buttonAppear, #response {
+  font-size: 12px;
+  
+}
+
+}
