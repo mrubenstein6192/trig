@@ -181,10 +181,10 @@ input{
 
 @media screen and (max-width: 767px) {
 #prompt, #buttonChoices {
-  font-size: 8px;
+  font-size: 9px;
 }
 .fraction{
-  font-size: 12px;
+  font-size: 10px;
 }
 
 h1 {
@@ -196,10 +196,10 @@ h3 {
 }
 
 #hideThis {
-  font-size: 8px;
+  font-size: 9px;
 }
 
-img {
+img, Image {
   width: 100px;
   height: 100px;
 }
@@ -213,3 +213,28 @@ img {
 }
 
 }
+
+@media screen and (max-width: 1025px) {
+
+  
+  #hideThis {
+    font-size: 16px;
+  }
+  .guessForm2 {
+    width: 100%;
+    margin-left: 10px;
+  }
+  img, Image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .nextProblem, .hideInfo, .showInfo, #basics, #skipToProblems {
+    font-size: 14px;
+  }
+  
+  #problemPrint, #showSides, #showProb, #fractionAppear, #buttonAppear {
+    font-size: 16px;
+  }
+  
+  }

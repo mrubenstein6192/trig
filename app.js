@@ -6,6 +6,7 @@ $(document).ready(function() {
   $("#practiceProblems").hide();
   $("#randomProblem").hide();
   $("#fractionInput").hide();
+  $(".nextProblem").hide();
   $(".nextProblem2").hide();
   // $("#showFirstProblemAgain").hide();
   function showQuestion() {
@@ -284,6 +285,7 @@ $(document).ready(function() {
     $("#skipToProblems").on("click", function() {
       // $("#buttonChoices").hide();
       $("#skipToProblems").hide();
+      $(".nextProblem").show();
       console.log("Skip");
      showQuestion();
       $("#seeBasics").on("click", function() {
