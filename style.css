@@ -87,7 +87,7 @@ h1 {
 }
 
 
-#disclaimer {
+#disclaimer, #secondProblems {
   border-radius: 25px;
   background-color: white;
   font-family: "Josefin Sans";
@@ -96,6 +96,10 @@ h1 {
   font-size: large;
   color:black;
 
+}
+
+#secondProblems {
+  font-size: 14px;
 }
 
 #prompt {

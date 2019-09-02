@@ -56,6 +56,7 @@ $(document).ready(function() {
     $secButton = $("<button type = 'submit'>Harder Problem</button>")
     $secButton.addClass("secSubmit");
     $("#harderProblemButton").html($secButton);
+    $(".secSubmit").hide()
     
 
     $(".submitGuess").on("click", function() {
@@ -106,7 +107,8 @@ $(document).ready(function() {
         $("#newProblem").show();
         $(".nextProblem").show();
         console.log("Numerator: " + numerator + " | Denominator: " + denominator );
-        $("#buttonAppear").html("✔")
+        $("#buttonAppear").html("✔");
+        $(".secSubmit").show()
       }
       else {
         $("#response").show();
@@ -120,6 +122,7 @@ $(document).ready(function() {
 
     $(".secSubmit").on("click", function() {
       console.log("second Button")
+      $secButton.text("New Problem");
       $("#secondProblems").show();
       $("#infoStuff").show();
       $("#pictureGoesHere").show();
