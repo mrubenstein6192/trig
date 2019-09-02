@@ -177,3 +177,39 @@ input{
   box-shadow: 5px 5px #666;
   transform: translateY(4px);
 }
+
+
+@media screen and (max-width: 767px) {
+#prompt, #buttonChoices {
+  font-size: 8px;
+}
+.fraction{
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+#hideThis {
+  font-size: 8px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.nextProblem, .hideInfo, .showInfo, #basics, #skipToProblems {
+  font-size: 14px;
+}
+
+#problemPrint, #showSides, #showProb, #fractionAppear, #buttonAppear {
+  font-size: 12px;
+}
+
+}
