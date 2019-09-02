@@ -14,7 +14,7 @@ $(document).ready(function() {
     $(".newProblem").hide();
     $(".showinfo").hide();
     $(".nextProblem").hide();
-    $("#secondProblems").show();
+   
     // $("#firstButton").hide();
     var randIndex = Math.floor(Math.random() * 15) + 1
     console.log(randIndex);
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
     $secButton = $("<button type = 'submit'>Harder Problem</button>")
     $secButton.addClass("secSubmit");
-    $("#secondProblems").html($secButton);
+    $("#harderProblemButton").html($secButton);
     
 
     $(".submitGuess").on("click", function() {
@@ -120,6 +120,9 @@ $(document).ready(function() {
 
     $(".secSubmit").on("click", function() {
       console.log("second Button")
+      $("#secondProblems").show();
+      $("#infoStuff").show();
+      $("#pictureGoesHere").show();
       var secRandInd = Math.floor(Math.random()*11) + 1
       console.log(secRandInd);
       console.log(trigProblems[secRandInd].question);
@@ -127,7 +130,7 @@ $(document).ready(function() {
       var secProbImg = new Image(150, 150);
       secProbImg.classList.add("secPic");
       secProbImg.src = trigProblems[secRandInd].pic;
-      $("#secondProblems").html(secProbImg);
+      $("#pictureGoesHere").html(secProbImg);
     })
   }
   var problems = [
