@@ -8,11 +8,13 @@ $(document).ready(function() {
   $("#fractionInput").hide();
   $(".nextProblem").hide();
   $(".nextProblem2").hide();
+  $("#secondProblems").hide();
   // $("#showFirstProblemAgain").hide();
   function showQuestion() {
     $(".newProblem").hide();
     $(".showinfo").hide();
     $(".nextProblem").hide();
+    $("#secondProblems").show();
     // $("#firstButton").hide();
     var randIndex = Math.floor(Math.random() * 15) + 1
     console.log(randIndex);
@@ -50,6 +52,10 @@ $(document).ready(function() {
     $button = $("<button type = 'submit'>Submit</button>")
     $button.addClass("submitGuess")
     $("#buttonAppear").html($button);
+
+    $secButton = $("<button type = 'submit'>Harder Problem</button>")
+    $secButton.addClass("secSubmit");
+    $("#secondProblems").html($secButton);
     
 
     $(".submitGuess").on("click", function() {
@@ -110,6 +116,18 @@ $(document).ready(function() {
         $(".second").val('');
         $(".first").focus();
       }
+    })
+
+    $(".secSubmit").on("click", function() {
+      console.log("second Button")
+      var secRandInd = Math.floor(Math.random()*11) + 1
+      console.log(secRandInd);
+      console.log(trigProblems[secRandInd].question);
+
+      var secProbImg = new Image(150, 150);
+      secProbImg.classList.add("secPic");
+      secProbImg.src = trigProblems[secRandInd].pic;
+      $("#secondProblems").html(secProbImg);
     })
   }
   var problems = [
@@ -259,6 +277,105 @@ $(document).ready(function() {
     }
   ]
 
+  var trigProblems = [
+    {
+      id: 0,
+      pic: "./secondImages/question1.png",
+      question: "cos",
+      angle: 72,
+      numerator: 6,
+      denominator: "x"
+    },
+    {
+      id: 1,
+      pic:  "./secondImages/question2.png",
+      question: "cos",
+      angle: 73,
+      numerator: "x",
+      denominator: 6
+    },
+    {
+      id: 2,
+      pic:  "./secondImages/question3.png",
+      question: "tan",
+      angle: 24,
+      numerator: "x",
+      denominator: 12
+    },
+    {
+      id: 3,
+      pic:  "./secondImages/question4.png",
+      question: "tan",
+      angle: 37,
+      numerator: "x",
+      denominator: 12
+    },
+    {
+      id: 4,
+      pic:  "./secondImages/question5.png",
+      question: "tan",
+      angle: 55,
+      numerator: 29,
+      denominator: "x"
+    },
+    {
+      id: 5,
+      pic:  "./secondImages/question6.png",
+      question: "tan",
+      angle: 68,
+      numerator: "x",
+      denominator: 21
+    },
+    {
+      id: 6,
+      pic:  "./secondImages/question7.png",
+      question: "sin",
+      angle: 19,
+      numerator: "x",
+      denominator: 29
+    },
+    {
+      id: 7,
+      pic:  "./secondImages/question8.png",
+      question: "sin",
+      angle: 21,
+      numerator: "x",
+      denominator: 22
+    },
+    {
+      id: 8,
+      pic:  "./secondImages/question9.png",
+      question: "sin",
+      angle: 33,
+      numerator: "x",
+      denominator: 29
+    },
+    {
+      id: 9,
+      pic:  "./secondImages/question10.png",
+      question: "sin",
+      angle: 45,
+      numerator: 35,
+      denominator: "x"
+    },
+    {
+      id: 10,
+      pic:  "./secondImages/question11.png",
+      question: "cos",
+      angle: 47,
+      numerator: 28,
+      denominator: "x"
+    },
+    {
+      id: 11,
+      pic:  "./secondImages/question12.png",
+      question: "cos",
+      angle: 59,
+      numerator: 34,
+      denominator: "x"
+    }
+  
+  ]
   $(document).on("click", ".start", function() {
     start();
   })
