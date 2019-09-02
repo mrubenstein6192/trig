@@ -134,6 +134,27 @@ $(document).ready(function() {
       secProbImg.classList.add("secPic");
       secProbImg.src = trigProblems[secRandInd].pic;
       $("#pictureGoesHere").html(secProbImg);
+      $("#buttonsGoHere").empty();
+      var trigButtons = ["sin", "cos", "tan"];
+      for (var i = 0; i < trigButtons.length; i++) {
+        var trigButton = $("<button>");
+        trigButton.addClass("sinCosTan");
+        trigButton.attr("value", trigButtons[i]);
+        trigButton.text(trigButtons[i]);
+        $("#buttonsGoHere").append(trigButton)
+        }
+        $(".sinCosTan").on("click", function() {
+          console.log(this.value)
+          if (this.value == trigProblems[secRandInd].question) {
+            console.log("correct");
+            $("#buttonsGoHere").html("✔")
+            $("#equation").html(trigProblems[secRandInd].question);
+          }
+          else {
+            $("#buttonsGoHere").append("✘");
+          }
+        })
+
     })
   }
   var problems = [
