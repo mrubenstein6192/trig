@@ -123,6 +123,9 @@ $(document).ready(function() {
     $(".secSubmit").on("click", function() {
       $("#equation").hide();
       $("#checkButtons").hide();
+      $("#algebra").empty();
+      $("#thirdCheck").empty();
+      
       console.log("second Button")
       $secButton.text("New Problem");
       $("#secondProblems").show();
@@ -147,6 +150,7 @@ $(document).ready(function() {
         }
         $(".sinCosTan").on("click", function() {
           console.log(this.value)
+          
           $form3 = $("<form autocomplete = 'off'></form>");
           $form3.addClass("guessForm3");
           $form3.append("<span class = 'angle'><input class = 'angleInput' type = 'text' maxlength = '2' size = '2'></input></span>");
@@ -159,7 +163,7 @@ $(document).ready(function() {
 
           $button3 = $("<button type = 'submit'>Check Equation</button>")
           $button3.addClass("thirdSubmit")
-
+          
           if (this.value == trigProblems[secRandInd].question) {
             console.log("correct");
             $("#buttonsGoHere").html("✔")
@@ -178,8 +182,21 @@ $(document).ready(function() {
               console.log(userAngle, userNumer, userDenom);
 
               if (userAngle == trigProblems[secRandInd].angle && userNumer == trigProblems[secRandInd].numerator && userDenom == trigProblems[secRandInd].denominator){
-                $("#equation").append("✔")
+                $("#buttonsGoHere").append("✔")
                 $("#checkButtons").empty();
+                
+                $("#algebra").html("Algebra Time!" + "<br>" + "Cross Multiply and Solve!" + "<br>" + trigProblems[secRandInd].question + "(")
+                $("#algebra").append(trigProblems[secRandInd].angle);
+                $("#algebra").append(") is really just a number! Use a calculator and treat it like any other number in an equation!" + "<br>" + "<i>Round to 2 decimal places</i>")
+                $("#thirdCheck").html("<div class='fraction mt-2 mr-3'><span class = 'fup'>" + trigProblems[secRandInd].question + "(" + trigProblems[secRandInd].angle + ")" + "</span><span class = 'bar'>/</span><span class = 'fdn'>1");
+                $("#thirdCheck").append("= ");
+                $("#thirdCheck").append(" <div class='fraction mt-2 mr-3'><span class='fup'>" + trigProblems[secRandInd].numerator + "</span><span class='bar'>/</span><span class='fdn'>" + trigProblems[secRandInd].denominator + "</span></div>");
+                $("#thirdCheck").append("<br>");
+                $("#thirdCheck").append("x = ")
+                $form5 = $("<form autocomplete = 'off'</form>");
+                $form5.addClass('finalAnswer');
+                $form5.append("<span class = 'lastInput'><input class = 'lastAnswer' type = 'text' maxlength = '5' size = '4'></input></span>");
+                $("#thirdCheck").append($form5);
               }
               else {
                 $("#checkButtons").append(" Sorry, try again");
