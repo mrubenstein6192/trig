@@ -161,7 +161,7 @@ form {
   
 }
 
-#basics, #skipToProblems, #seeBasics, .nextProblem, .hideInfo, .showInfo, .submitGuess, .nextProblem2{
+#basics, #skipToProblems, #seeBasics, .nextProblem, .hideInfo, .showInfo, .submitGuess, .nextProblem2, .secSubmit, .fourthSubmit, .thirdSubmit, .sinCosTan{
   background-color: lightblue;
   padding: 1px 3px;
   font-size: 18px;
@@ -176,13 +176,13 @@ form {
   margin-left: 7px;
 }
 
-#basics:hover, #skipToProblems:hover, #seeBasics:hover, .nextProblem:hover, .hideInfo:hover, .showInfo:hover, .submitGuess:hover, .nextProblem2:hover {
+#basics:hover, #skipToProblems:hover, #seeBasics:hover, .nextProblem:hover, .hideInfo:hover, .showInfo:hover, .submitGuess:hover, .nextProblem2:hover, .secSubmit:hover, .fourthSubmit:hover, .thirdSubmit:hover, .sinCosTan:hover {
   background-color: maroon;
   color: lightblue;
 }
 
 
-#basics:active, #skipToProblems:active, #seeBasics:active, .nextProblem:active, .hideInfo:active, .showInfo:active, .submitGuess:active, .nextProblem2:active{
+#basics:active, #skipToProblems:active, #seeBasics:active, .nextProblem:active, .hideInfo:active, .showInfo:active, .submitGuess:active, .nextProblem2:active, .secSubmit:active, .fourthSubmit:active, .thirdSubmit:active, .sinCosTan:active{
   background-color: maroon;
   color: skyblue;
   box-shadow: 5px 5px #666;

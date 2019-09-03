@@ -12,9 +12,9 @@ $(document).ready(function() {
   $("#algebra").hide()
   // $("#showFirstProblemAgain").hide();
   function showQuestion() {
-    $(".newProblem").hide();
+    // $(".newProblem").hide();
     $(".showinfo").hide();
-    $(".nextProblem").hide();
+    // $(".nextProblem").hide();
    
     // $("#firstButton").hide();
     var randIndex = Math.floor(Math.random() * 15) + 1
@@ -54,10 +54,10 @@ $(document).ready(function() {
     $button.addClass("submitGuess")
     $("#buttonAppear").html($button);
 
-    $secButton = $("<button type = 'submit'>Harder Problem</button>")
+    $secButton = $("<button type = 'submit'>Try Advanced Problem</button>")
     $secButton.addClass("secSubmit");
     $("#harderProblemButton").html($secButton);
-    $(".secSubmit").hide()
+    // $(".secSubmit").hide()
     
 
     $(".submitGuess").on("click", function() {
