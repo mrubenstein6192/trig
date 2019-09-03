@@ -124,7 +124,7 @@ $(document).ready(function() {
     $(".secSubmit").on("click", function() {
       $("#equation").hide();
       $("#checkButtons").hide();
-      $("#algebra").empty();
+      $("#algebra").hide();
       $("#thirdCheck").empty();
       
       console.log("second Button")
@@ -133,7 +133,7 @@ $(document).ready(function() {
       $("#infoStuff").show();
       $("#pictureGoesHere").show();
       var secRandInd = Math.floor(Math.random()*11) + 1
-      console.log(secRandInd);
+      console.log(trigProblems[secRandInd].id);
       console.log(trigProblems[secRandInd].question);
 
       var secProbImg = new Image(150, 150);
@@ -169,6 +169,7 @@ $(document).ready(function() {
             console.log("correct");
             $("#buttonsGoHere").html("✔")
             $("#equation").show();
+            
             $("#checkButtons").show();
             $("#equation").html(trigProblems[secRandInd].question + "( ");
             $("#equation").append($form3);
@@ -205,6 +206,17 @@ $(document).ready(function() {
 
                 $(".fourthSubmit").on("click", function() {
                   console.log("Last Submit!");
+                  var userAnswer = $(".lastAnswer").val();
+                  if (userAnswer == trigProblems[secRandInd].sol1 || userAnswer == trigProblems[secRandInd].sol2) {
+                    $("#sorry").empty();
+                    $("#thirdCheck").append("✔");
+                    $("#thirdCheck").append("<br>" + "Awesome Job! Try Another!");
+                  }
+                  else {
+                    $("#thirdCheck").append("<br>" + "<div id ='sorry'></div>")
+                    $("#sorry").empty();
+                    $("#sorry").append("Sorry that is incorrect.  Try again!")
+                  }
                 })
               }
               else {
