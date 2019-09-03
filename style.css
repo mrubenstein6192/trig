@@ -87,7 +87,7 @@ h1 {
 }
 
 
-#disclaimer, #secondProblems {
+#disclaimer, #secondProblems, #algebra {
   border-radius: 25px;
   background-color: white;
   font-family: "Josefin Sans";
@@ -103,7 +103,7 @@ h1 {
   padding: 3px;
 }
 
-#secondProblems {
+#secondProblems, #algebra {
   font-size: 14px;
 }
 

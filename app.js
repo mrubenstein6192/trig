@@ -9,6 +9,7 @@ $(document).ready(function() {
   $(".nextProblem").hide();
   $(".nextProblem2").hide();
   $("#secondProblems").hide();
+  $("#algebra").hide()
   // $("#showFirstProblemAgain").hide();
   function showQuestion() {
     $(".newProblem").hide();
@@ -184,7 +185,7 @@ $(document).ready(function() {
               if (userAngle == trigProblems[secRandInd].angle && userNumer == trigProblems[secRandInd].numerator && userDenom == trigProblems[secRandInd].denominator){
                 $("#buttonsGoHere").append("✔")
                 $("#checkButtons").empty();
-                
+                $("#algebra").show();
                 $("#algebra").html("Algebra Time!" + "<br>" + "Cross Multiply and Solve!" + "<br>" + trigProblems[secRandInd].question + "(")
                 $("#algebra").append(trigProblems[secRandInd].angle);
                 $("#algebra").append(") is really just a number! Use a calculator and treat it like any other number in an equation!" + "<br>" + "<i>Round to 2 decimal places</i>")
@@ -197,6 +198,14 @@ $(document).ready(function() {
                 $form5.addClass('finalAnswer');
                 $form5.append("<span class = 'lastInput'><input class = 'lastAnswer' type = 'text' maxlength = '5' size = '4'></input></span>");
                 $("#thirdCheck").append($form5);
+
+                $button4 = $("<button type = 'submit'>Submit</button>")
+                $button4.addClass("ml-3 fourthSubmit")
+                $("#thirdCheck").append($button4);
+
+                $(".fourthSubmit").on("click", function() {
+                  console.log("Last Submit!");
+                })
               }
               else {
                 $("#checkButtons").append(" Sorry, try again");
