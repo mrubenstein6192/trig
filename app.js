@@ -36,18 +36,18 @@ $(document).ready(function() {
     $form2 = $("<form autocomplete = 'off'></form>");
     $form2.addClass("guessForm2 ml-0 mt-2 text-right");
     $form2.append("<div id = optional>(Optional)</div><br>")
-    $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'numerical' maxlength = '2' size = '2'></input></span></div>");
-    $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'numerical' maxlength = '2' size = '2'></input></span></div>");
-    $form2.append("<div id = hypCheck>Hypotenuse: <span class = 'fup my-1'><input class = 'hyp' type = 'numerical' maxlength = '2' size = '2'></input></span></div>");
+    $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'numeric' maxlength = '2' size = '2'></input></span></div>");
+    $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'numeric' maxlength = '2' size = '2'></input></span></div>");
+    $form2.append("<div id = hypCheck>Hypotenuse: <span class = 'fup my-1'><input class = 'hyp' type = 'numeric' maxlength = '2' size = '2'></input></span></div>");
     $("#showSides").html($form2)
 
     $form = $("<form autocomplete = 'off'></form>");
     $form.addClass("guessForm1 fraction ml-0 mt-2");
-    $form.append("<span class = 'fup'><input class = 'first' type = 'numerical' maxlength = '2' size = '2'></input></span>");
+    $form.append("<span class = 'fup'><input class = 'first' type = 'numeric' maxlength = '2' size = '2'></input></span>");
     $form.append("<span class = 'bar my-3'></span>")
     // $form2 = $("<form autocomplete = 'off'></form>");
     // $form2.addClass("guessForm2 fraction ml-0 mt-2");
-    $form.append("<span class = 'fdn'><input class = 'second' type = 'numerical' maxlength = '2' size = '2'></input></span>");
+    $form.append("<span class = 'fdn'><input class = 'second' type = 'numeric' maxlength = '2' size = '2'></input></span>");
     $("#fractionAppear").html($form)
     
     $button = $("<button type = 'submit'>Submit</button>")
@@ -154,13 +154,13 @@ $(document).ready(function() {
           
           $form3 = $("<form autocomplete = 'off'></form>");
           $form3.addClass("guessForm3");
-          $form3.append("<span class = 'angle'><input class = 'angleInput' type = 'numerical' maxlength = '2' size = '2'></input></span>");
+          $form3.append("<span class = 'angle'><input class = 'angleInput' type = 'numeric' maxlength = '2' size = '2'></input></span>");
 
           $form4 = $("<form autocomplete = 'off'></form>");
           $form4.addClass("guessForm4 fraction ml-0 mt-2");
-          $form4.append("<span class = 'fup'><input class = 'userNumerator' type = 'numerical' maxlength = '2' size = '2'></input></span>");
+          $form4.append("<span class = 'fup'><input class = 'userNumerator' type = 'numeric' maxlength = '2' size = '2'></input></span>");
           $form4.append("<span class = 'bar my-3'></span>")
-          $form4.append("<span class = 'fdn'><input class = 'userDenominator' type = 'numerical' maxlength = '2' size = '2'></input></span>");
+          $form4.append("<span class = 'fdn'><input class = 'userDenominator' type = 'numeric' maxlength = '2' size = '2'></input></span>");
 
           $button3 = $("<button type = 'submit'>Check Equation</button>")
           $button3.addClass("thirdSubmit")
@@ -198,7 +198,7 @@ $(document).ready(function() {
                 $("#thirdCheck").append("x = ")
                 $form5 = $("<form autocomplete = 'off'</form>");
                 $form5.addClass('finalAnswer');
-                $form5.append("<span class = 'lastInput'><input class = 'lastAnswer' type = 'numerical' maxlength = '5' size = '4'></input></span>");
+                $form5.append("<span class = 'lastInput'><input class = 'lastAnswer' type = 'numeric' maxlength = '5' size = '4'></input></span>");
                 $("#thirdCheck").append($form5);
 
                 $button4 = $("<button type = 'submit'>Submit</button>")
