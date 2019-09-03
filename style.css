@@ -124,7 +124,9 @@ h1 {
 input{
   text-align: center;
 }
-
+form {
+  display: inline;
+}
 #showSides {
   font-size: 14px;
 }

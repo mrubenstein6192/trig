@@ -121,6 +121,8 @@ $(document).ready(function() {
     })
 
     $(".secSubmit").on("click", function() {
+      $("#equation").hide();
+      $("#checkButtons").hide();
       console.log("second Button")
       $secButton.text("New Problem");
       $("#secondProblems").show();
@@ -145,10 +147,47 @@ $(document).ready(function() {
         }
         $(".sinCosTan").on("click", function() {
           console.log(this.value)
+          $form3 = $("<form autocomplete = 'off'></form>");
+          $form3.addClass("guessForm3");
+          $form3.append("<span class = 'angle'><input class = 'angleInput' type = 'text' maxlength = '2' size = '2'></input></span>");
+
+          $form4 = $("<form autocomplete = 'off'></form>");
+          $form4.addClass("guessForm4 fraction ml-0 mt-2");
+          $form4.append("<span class = 'fup'><input class = 'userNumerator' type = 'text' maxlength = '2' size = '2'></input></span>");
+          $form4.append("<span class = 'bar my-3'></span>")
+          $form4.append("<span class = 'fdn'><input class = 'userDenominator' type = 'text' maxlength = '2' size = '2'></input></span>");
+
+          $button3 = $("<button type = 'submit'>Check Equation</button>")
+          $button3.addClass("thirdSubmit")
+
           if (this.value == trigProblems[secRandInd].question) {
             console.log("correct");
             $("#buttonsGoHere").html("✔")
-            $("#equation").html(trigProblems[secRandInd].question);
+            $("#equation").show();
+            $("#checkButtons").show();
+            $("#equation").html(trigProblems[secRandInd].question + "( ");
+            $("#equation").append($form3);
+            $("#equation").append(" ) = ");
+            $("#equation").append($form4);
+            $("#checkButtons").html($button3);
+
+            $(".thirdSubmit").on("click", function() {
+              var userAngle = $(".angleInput").val();
+              var userNumer = $(".userNumerator").val();
+              var userDenom = $(".userDenominator").val();
+              console.log(userAngle, userNumer, userDenom);
+
+              if (userAngle == trigProblems[secRandInd].angle && userNumer == trigProblems[secRandInd].numerator && userDenom == trigProblems[secRandInd].denominator){
+                $("#equation").append("✔")
+                $("#checkButtons").empty();
+              }
+              else {
+                $("#checkButtons").append(" Sorry, try again");
+                $(".angleInput").val("");
+                $(".userNumerator").val("");
+                $(".userDenominator").val("");
+              }
+            })
           }
           else {
             $("#buttonsGoHere").append("✘");
