@@ -376,7 +376,9 @@ $(document).ready(function() {
       question: "cos",
       angle: 72,
       numerator: 6,
-      denominator: "x"
+      denominator: "x",
+      sol1: 19.42,
+      sol2: 19.35
     },
     {
       id: 1,
@@ -384,7 +386,9 @@ $(document).ready(function() {
       question: "cos",
       angle: 73,
       numerator: "x",
-      denominator: 6
+      denominator: 6,
+      sol1: 1.85,
+      sol2: 1.86
     },
     {
       id: 2,
@@ -392,7 +396,9 @@ $(document).ready(function() {
       question: "tan",
       angle: 24,
       numerator: "x",
-      denominator: 12
+      denominator: 12,
+      sol1: 5.34,
+      sol2: 5.40
     },
     {
       id: 3,
@@ -400,7 +406,9 @@ $(document).ready(function() {
       question: "tan",
       angle: 37,
       numerator: "x",
-      denominator: 12
+      denominator: 12,
+      sol1: 9.04,
+      sol2: 9
     },
     {
       id: 4,
@@ -408,7 +416,9 @@ $(document).ready(function() {
       question: "tan",
       angle: 55,
       numerator: 29,
-      denominator: "x"
+      denominator: "x",
+      sol1: 20.31,
+      sol2: 20.28
     },
     {
       id: 5,
@@ -416,7 +426,9 @@ $(document).ready(function() {
       question: "tan",
       angle: 68,
       numerator: "x",
-      denominator: 21
+      denominator: 21,
+      sol1: 51.98,
+      sol2: 52.08
     },
     {
       id: 6,
@@ -424,7 +436,9 @@ $(document).ready(function() {
       question: "sin",
       angle: 19,
       numerator: "x",
-      denominator: 29
+      denominator: 29,
+      sol1: 9.44,
+      sol2: 9.57
     },
     {
       id: 7,
@@ -432,7 +446,9 @@ $(document).ready(function() {
       question: "sin",
       angle: 21,
       numerator: "x",
-      denominator: 22
+      denominator: 22,
+      sol1: 7.88,
+      sol2: 7.92
     },
     {
       id: 8,
@@ -440,7 +456,9 @@ $(document).ready(function() {
       question: "sin",
       angle: 33,
       numerator: "x",
-      denominator: 29
+      denominator: 29,
+      sol1: 15.79,
+      sol2: 15.66
     },
     {
       id: 9,
@@ -448,7 +466,9 @@ $(document).ready(function() {
       question: "sin",
       angle: 45,
       numerator: 35,
-      denominator: "x"
+      denominator: "x",
+      sol1: 49.5,
+      sol2: 49.3
     },
     {
       id: 10,
@@ -456,7 +476,9 @@ $(document).ready(function() {
       question: "cos",
       angle: 47,
       numerator: 28,
-      denominator: "x"
+      denominator: "x",
+      sol1: 41.06,
+      sol2: 41.18
     },
     {
       id: 11,
@@ -464,7 +486,9 @@ $(document).ready(function() {
       question: "cos",
       angle: 59,
       numerator: 34,
-      denominator: "x"
+      denominator: "x",
+      sol1: 66.01,
+      sol2: 65.38
     }
   
   ]
