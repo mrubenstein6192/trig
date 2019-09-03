@@ -184,6 +184,7 @@ $(document).ready(function() {
               console.log(userAngle, userNumer, userDenom);
 
               if (userAngle == trigProblems[secRandInd].angle && userNumer == trigProblems[secRandInd].numerator && userDenom == trigProblems[secRandInd].denominator){
+                $("#sorry2").empty();
                 $("#buttonsGoHere").append("✔")
                 $("#checkButtons").empty();
                 $("#algebra").show();
@@ -203,6 +204,7 @@ $(document).ready(function() {
                 $button4 = $("<button type = 'submit'>Submit</button>")
                 $button4.addClass("ml-3 fourthSubmit")
                 $("#thirdCheck").append($button4);
+                $(".fourthSubmit").show();
 
                 $(".fourthSubmit").on("click", function() {
                   console.log("Last Submit!");
@@ -211,6 +213,7 @@ $(document).ready(function() {
                     $("#sorry").empty();
                     $("#thirdCheck").append("✔");
                     $("#thirdCheck").append("<br>" + "Awesome Job! Try Another!");
+                    $(".fourthSubmit").hide();
                   }
                   else {
                     $("#thirdCheck").append("<br>" + "<div id ='sorry'></div>")
@@ -220,7 +223,9 @@ $(document).ready(function() {
                 })
               }
               else {
-                $("#checkButtons").append(" Sorry, try again");
+                $("#checkButtons").append("<div id = 'sorry2'></div>")
+                $("#sorry2").empty();
+                $("#sorry2").append( "Sorry, try again");
                 $(".angleInput").val("");
                 $(".userNumerator").val("");
                 $(".userDenominator").val("");
