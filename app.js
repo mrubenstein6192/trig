@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#response").hide();
 
     $form2 = $("<form autocomplete = 'off'></form>");
-    $form2.addClass("guessForm2 col-md-5 col-lg-3 ml-3 mt-2 text-right");
+    $form2.addClass("guessForm2");
     $form2.append("<div id = optional>(Optional)</div><br>")
     $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'numeric' pattern='\d*' maxlength = '2' size = '2'></input></span></div>");
     $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'numeric' pattern='\d*' maxlength = '2' size = '2'></input></span></div>");
