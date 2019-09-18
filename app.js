@@ -34,7 +34,7 @@ $(document).ready(function() {
     $("#response").hide();
 
     $form2 = $("<form autocomplete = 'off'></form>");
-    $form2.addClass("guessForm2 ml-0 mt-2 text-right");
+    $form2.addClass("guessForm2 col-md-5 col-lg-3 ml-3 mt-2 text-right");
     $form2.append("<div id = optional>(Optional)</div><br>")
     $form2.append("<div id = oppCheck>Opposite: <span class = 'fup my-1'><input class = 'opp' type = 'numeric' pattern='\d*' maxlength = '2' size = '2'></input></span></div>");
     $form2.append("<div id = adjCheck>Adjacent: <span class = 'fup my-1'><input class = 'adj' type = 'numeric' pattern='\d*' maxlength = '2' size = '2'></input></span></div>");
@@ -195,10 +195,12 @@ $(document).ready(function() {
                 $("#thirdCheck").append("= ");
                 $("#thirdCheck").append(" <div class='fraction mt-2 mr-3'><span class='fup'>" + trigProblems[secRandInd].numerator + "</span><span class='bar'>/</span><span class='fdn'>" + trigProblems[secRandInd].denominator + "</span></div>");
                 $("#thirdCheck").append("<br>");
+                $("#thirdCheck").append("<br>")
                 $("#thirdCheck").append("x = ")
                 $form5 = $("<form autocomplete = 'off'</form>");
                 $form5.addClass('finalAnswer');
                 $form5.append("<span class = 'lastInput'><input class = 'lastAnswer' type = 'numeric' pattern='\d*' maxlength = '5' size = '4'></input></span>");
+               
                 $("#thirdCheck").append($form5);
 
                 $button4 = $("<button type = 'submit'>Submit</button>")
